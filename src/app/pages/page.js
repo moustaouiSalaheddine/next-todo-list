@@ -12,6 +12,7 @@ function page() {
         src={"https://via.placeholder.com/250x150/"}
         width={250}
         height={250}
+        alt="image"
       />
       <ButtonUsage />
       <Paper sx={{}}></Paper>
