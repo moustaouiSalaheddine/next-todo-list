@@ -1,5 +1,5 @@
 import React from "react";
-import ButtonUsage from "../../../components/ButtonUsage";
+import ButtonUsage from "@/components/ButtonUsage";
 import Image from "next/image";
 import { Box } from "@mui/system";
 import { Paper } from "@mui/material";
