@@ -1,14 +1,15 @@
 "use client";
 
-import React from "react";
+import CustomizedTabHeaders from "@/components/CustomizedTabHeaders";
+import React, { Fragment } from "react";
 
 function item({ params }) {
-  console.log(params);
   return (
-    <div>
+    <Fragment>
+      <CustomizedTabHeaders activeIndex={"Blog"} />
       <h1>hello {params.id}</h1>
       <p>this is dynamic page</p>
-    </div>
+    </Fragment>
   );
 }
 
