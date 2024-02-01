@@ -29,7 +29,7 @@ const Doc = ({ params }) => {
   }
   return (
     <div>
-      <CustomizedTabHeaders activeIndex={"Home"} />
+      <CustomizedTabHeaders activeIndex={"Docs"} />
       <Typography variant="h1" gutterBottom>
         Docs
       </Typography>

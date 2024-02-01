@@ -36,7 +36,7 @@ const ProductList = () => {
             </Link>
           );
         })}
-        <Link href={`products/${productId}`}>
+        <Link href={`products/${productId}`} replace>
           <ListItemButton component="a">
             <ListItemText>
               <Typography variant="h6" gutterBottom>

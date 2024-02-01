@@ -6,6 +6,7 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const AntTabs = styled(Tabs)({
   borderBottom: "1px solid #e8e8e8",
@@ -49,6 +50,7 @@ const AntTab = styled((props) => <Tab disableRipple {...props} />)(
     },
   })
 );
+
 const tabs = [
   {
     title: "Home",
@@ -67,7 +69,7 @@ const tabs = [
     href: "/docs",
   },
 ];
-const CustomizedTabHeaders = ({ activeIndex = "Home" }) => {
+const CustomizedTabHeaders = ({ activeIndex }) => {
   const getIndexByTitleIgnoreCase = (title) => {
     const lowerCaseTitle = title.toLowerCase();
     return tabs.findIndex((tab) => tab.title.toLowerCase() === lowerCaseTitle);
@@ -78,16 +80,13 @@ const CustomizedTabHeaders = ({ activeIndex = "Home" }) => {
       <Box sx={{ bgcolor: "#fff" }}>
         <AntTabs
           value={getIndexByTitleIgnoreCase(activeIndex)}
-          //   onChange={handleChange}
           aria-label="ant example"
         >
-          {tabs.map((item, i) => {
-            return (
-              <Link key={i} href={item?.href}>
-                <AntTab label={item?.title} />
-              </Link>
-            );
-          })}
+          {tabs.map((item, i) => (
+            <Link key={i} href={item.href}>
+              <AntTab label={item.title} />
+            </Link>
+          ))}
         </AntTabs>
         <Box sx={{ p: 3 }} />
       </Box>
