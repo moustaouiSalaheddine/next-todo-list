@@ -62,6 +62,10 @@ const tabs = [
     title: "Blog",
     href: "/blog/salah",
   },
+  {
+    title: "Docs",
+    href: "/docs",
+  },
 ];
 const CustomizedTabHeaders = ({ activeIndex = "Home" }) => {
   const getIndexByTitleIgnoreCase = (title) => {
